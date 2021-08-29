@@ -9,6 +9,18 @@
     </div>
 </div>
 
+@if (Auth::check())
+    <div class="pt-15 w-1/5  m-auto">
+        <a 
+            href="/blog/create"
+            class="bg-blue-900 uppercase bg-transparent text-center text-gray-100 text-lg block font-bold py-4 px-5 rounded-2xl">
+            Create post
+        </a>
+    </div>
+@endif
+
+
+
 @foreach ($posts as $post)
 
 <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
@@ -29,9 +41,10 @@
             {{ $post->description }}
         </p>
 
-        <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-500 text-gray-100 text-lg font-extrabold py-4 px-8 rounded-3xl">
+        <a href="/blog/{{ $post->slug }}" class="uppercase bg-blue-200 text-gray-800 text-md font-bold py-2 px-8 rounded-3xl">
             Keep Reading
         </a>
+        
 
     </div>
 </div>
