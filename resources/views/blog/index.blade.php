@@ -9,6 +9,14 @@
     </div>
 </div>
 
+@if (session()->has('message'))
+    <div class="w-4/5 m-auto mt-10 pl-2">
+        <p class="w-2/6 mb-4 text-gray-50 bg-green-500 rounded-2xl py-4">
+            {{ session()->get('message') }}
+        </p>
+    </div>
+@endif
+
 @if (Auth::check())
     <div class="pt-15 w-1/5  m-auto">
         <a 
