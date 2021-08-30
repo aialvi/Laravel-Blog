@@ -63,12 +63,13 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  string  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        return view('blog.show')
+            ->with('post', Post::where('slug', $slug)-> first());
     }
 
     /**
