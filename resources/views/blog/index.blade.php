@@ -33,7 +33,7 @@
 
 <div class="sm:grid grid-cols-2 gap-20 w-4/5 mx-auto py-15 border-b border-gray-200">
     <div>
-        <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/workspace-1280538_960_720.jpg" alt="">
+        <img src="{{ asset('images/' . $post->image_path) }}" alt="">
     </div>
     <div>
         <h2 class="text-gray-700 font-bold text-5xl pb-4">
